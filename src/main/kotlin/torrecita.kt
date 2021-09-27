@@ -30,7 +30,6 @@ fun creaRascacielos(number : Int,numberr : Int): String {
 }
 
 fun creaPiramides(number : Int){
-    var resultado = "";
     var espacios=0
     espacios=number
     repeat(number){ ir->
