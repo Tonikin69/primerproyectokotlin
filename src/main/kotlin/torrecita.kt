@@ -45,6 +45,5 @@ fun creaPiramides(number : Int){
         println("")
         espacios =espacios-1
     }
-
 }
 
