@@ -1,5 +1,7 @@
 
+import java.lang.NumberFormatException
 import kotlin.math.sqrt
+import kotlin.random.Random
 
 fun main(){
     println("Primer programa en kotlin")
@@ -31,6 +33,41 @@ fun main(){
 println("Voy ha hacer una torre con 4 pisos y 3 ventanas")
 
     torre(4,3)
+
+}
+fun adivinarnumero(){
+    var numleido= leerNumero()
+    var aleatorio: Int = Random.nextInt(0, 9)
+    var respuesta = false
+
+    do {
+
+        if (numleido>aleatorio){
+            println("Tu numero es mayor")
+        } else if (aleatorio>numleido){
+            println("Tu numero es menor")
+        } else {
+            println("Acertaste")
+            respuesta=true
+        }
+    } while (respuesta == false)
+}
+fun getRandomNumber(rango: IntRange): Int {
+    return rango.random()
+}
+
+fun leerNumero(): Int {
+    var textoLeido : String?
+    do {
+        textoLeido = readLine()
+        textoLeido?.let { texto ->
+            try {
+                return texto.toInt()
+            } catch (e: NumberFormatException) {
+                println("Este texto no parece ser un numero")
+            }
+        }
+    }while (true)
 
 }
 
