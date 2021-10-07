@@ -17,6 +17,7 @@ fun generarPalabraAleatoria(): String{
         var aleatoriominuscula: Char = Random.nextInt(97, 122).toChar()
         respuesta+=aleatoriominuscula
 
+
     }
 
     return respuesta
