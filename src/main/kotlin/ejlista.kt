@@ -23,6 +23,26 @@ fun main() {
     }
  println(listresultado)
 
+//SEGUNDO EJERCICIO
+
+    val lista = listOf("Hola,", 2, 3, "¿", 0.1, "Qué", 1, "tal", 0.9, "?")
+     var suma =0.0
+    var cadena = ""
+    for (element in lista){
+       if(element is Int || element is Double){
+           suma+=element.toString().toDouble()
+       } else{
+           element.toString()
+           cadena+=element
+       }
+    }
+
+    println(suma)
+    println(cadena)
+
+
+
+
 
 
 
