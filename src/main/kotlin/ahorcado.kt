@@ -7,6 +7,7 @@ fun main(){
     var flag=false
     var flaq2=false
     var flaq3=false
+    var flaq4=false
     var cont=0
     var continnt=0
     var letrita=' '
@@ -40,16 +41,17 @@ fun main(){
 
             repeat(lista.size) {
 
+                if (flaq2==false){
+                    continnt+=1
+                }
+                flaq2=true
 
 
                 if (lista[it] == intento){
                     lista2[it]=intento
-                    cont++
+                   cont+=1
                 }else{
-                    if (flaq2==false){
-                        continnt+=1
-                    }
-                    flaq2=true
+
 
                     letras.add(intento)
 
@@ -59,10 +61,12 @@ fun main(){
         if(cont==lista.size){
             flag=true
             flaq2=false
+            flaq4=false
         }
 
 
         println(lista2)
+        println(cont)
 
 
 
