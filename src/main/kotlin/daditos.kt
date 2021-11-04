@@ -2,7 +2,6 @@ import kotlin.random.Random
 val listresultado = mutableListOf<Participante>()
 fun main() {
 
-
     repeat(100){
         var juga = Participante(it)
        listresultado.add(juga)
